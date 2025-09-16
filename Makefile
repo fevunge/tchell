@@ -1,22 +1,13 @@
-CC=cc
-CFLAGS=-Wall -Wextra -Werror
-
-SRC=main.c tchell.c
-OBJ=$(SRC:.c=.o)
-
-NAME=tchell
-
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+all:
+	make -C src/
 
 clean:
-	rm -f $(OBJ)
+	make clean -C src/
 
-fclean: clean
-	rm -f $(NAME)
+fclean:
+	make fclean -C src/
 
-re: fclean all
+re:
+	make re -C src/
 
 .PHONY: all clean fclean re
