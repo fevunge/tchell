@@ -25,7 +25,7 @@ char	*ft_substr(char *s, unsigned int start, size_t len);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1024
+#  define BUFFER_SIZE 1
 # endif
 
 #endif
