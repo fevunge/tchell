@@ -3,15 +3,22 @@ CFLAGS=-Wall -Wextra -Werror
 
 SRC=main.c tchell.c
 OBJ=$(SRC:.c=.o)
+LIBGNL=libgnl.a
 
 NAME=../build/tchell
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(LIBGNL)
+	mkdir ../build -p
 	$(CC) $(CFLAGS) -o $@ $^
 
+$(LIBGNL):
+	$(MAKE) -C get_next_line/
+
 clean:
+	rm -f $(LIBGNL)
+	make clean -C get_next_line/
 	rm -f $(OBJ)
 
 fclean: clean
