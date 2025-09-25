@@ -6,7 +6,8 @@ void tch_loop(void)
 {
   char *input;
 
-  while (1) {
+  while (1)
+  {
     write(1, "tcsh !.. ", 9);
     input = get_next_line(0);
     write(1, input, strlen(input));
