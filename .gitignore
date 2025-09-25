@@ -1,1 +1,6 @@
 build
+src/get_next_line/*.o
+src/*.o
+src/libgnl.a
+*.o
+
