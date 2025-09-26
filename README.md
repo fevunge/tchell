@@ -1,29 +1,11 @@
 # Tchell
 
-# Tchell
-
-![Project Image](<https://socialify.git.ci/fevunge/tchell/image?custom_description=My+own+simplis>
-tic+Unix+shell+in+C&description=1&language=1&name=1&owner=1&pattern=Circuit+Board&theme=Auto)
-
 A minimalistic Unix shell implementation written in C, demonstrating fundamental systems
 programming concepts and shell functionality.
 
-## 📋 Table of Contents
+## About
 
-- [About](#about)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
-## 🚀 About
-
-Tchell is a custom Unix shell implementation that provides a basic command-line interface. This
+**Tchell** is a custom Unix shell implementation that provides a basic command-line interface. This
 project showcases:
 
 - **Systems Programming**: Direct interaction with Unix system calls
@@ -45,34 +27,34 @@ and demonstrates proficiency in low-level C programming.
 - **Memory Safe**: Proper memory management practices
 - **Unix Compliant**: Follows Unix shell conventions
 
-## 🔧 Prerequisites
+## Prerequisites
 
 - **GCC** or compatible C compiler
 - **Make** build system
 - **Unix-like operating system** (Linux, macOS, etc.)
 
-## 📦 Installation
+## Installation
 
 1. **Clone the repository**:
 
-    ```bash
-    git clone https://github.com/fevunge/tchell.git
-    cd tchell
-    ```
+   ```bash
+   git clone https://github.com/fevunge/tchell.git
+   cd tchell
+   ```
 
 2. **Build the project**:
 
-    ```bash
-    make
-    ```
+   ```bash
+   make
+   ```
 
 3. **Run the shell**:
 
-    ```bash
-    make run
-    # or directly:
-    ./build/tchell
-    ```
+   ```bash
+   make run
+   # or directly:
+   ./build/tchell
+   ```
 
 ## 🎯 Usage
 
@@ -93,17 +75,27 @@ tcsh !.. your_command_here
 ## 📁 Project Structure
 
 ```
-tchell/
- src/
-    get_next_line/     # Custom file reading implementation
-    printft/           # Custom printf implementation
-    strings/           # String manipulation utilities
-    main.c             # Entry point
-    tchell.c           # Main shell loop implementation
-    tchell.h           # Header file with function declarations
- build/                 # Generated executable (after build)
- Makefile              # Build configuration
- README.md             # This file
+.
+├── Makefile
+├── README.md
+└── src
+    ├── get_next_line
+    │   ├── get_next_line.c
+    │   ├── get_next_line.h
+    │   ├── get_next_line_utils.c
+    │   └── Makefile
+    ├── main.c
+    ├── Makefile
+    ├── printft
+    │   ├── printft_arg.c
+    │   ├── printft.c
+    │   ├── printft.h
+    │   └── printft_utils.c
+    ├── strings
+    │   ├── strinclude.c
+    │   └── strings.h
+    ├── tchell.c
+    └── tchell.h
 ```
 
 ## 🛠 Technologies Used
